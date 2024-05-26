@@ -1,0 +1,14 @@
+/Users/prithviseran/Documents/AI_Note_Writing/app/bin/Debug/net8.0/app
+/Users/prithviseran/Documents/AI_Note_Writing/app/bin/Debug/net8.0/app.deps.json
+/Users/prithviseran/Documents/AI_Note_Writing/app/bin/Debug/net8.0/app.runtimeconfig.json
+/Users/prithviseran/Documents/AI_Note_Writing/app/bin/Debug/net8.0/app.dll
+/Users/prithviseran/Documents/AI_Note_Writing/app/bin/Debug/net8.0/app.pdb
+/Users/prithviseran/Documents/AI_Note_Writing/app/obj/Debug/net8.0/app.GeneratedMSBuildEditorConfig.editorconfig
+/Users/prithviseran/Documents/AI_Note_Writing/app/obj/Debug/net8.0/app.AssemblyInfoInputs.cache
+/Users/prithviseran/Documents/AI_Note_Writing/app/obj/Debug/net8.0/app.AssemblyInfo.cs
+/Users/prithviseran/Documents/AI_Note_Writing/app/obj/Debug/net8.0/app.csproj.CoreCompileInputs.cache
+/Users/prithviseran/Documents/AI_Note_Writing/app/obj/Debug/net8.0/app.dll
+/Users/prithviseran/Documents/AI_Note_Writing/app/obj/Debug/net8.0/refint/app.dll
+/Users/prithviseran/Documents/AI_Note_Writing/app/obj/Debug/net8.0/app.pdb
+/Users/prithviseran/Documents/AI_Note_Writing/app/obj/Debug/net8.0/app.genruntimeconfig.cache
+/Users/prithviseran/Documents/AI_Note_Writing/app/obj/Debug/net8.0/ref/app.dll
