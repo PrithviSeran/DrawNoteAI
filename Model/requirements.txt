@@ -1,0 +1,20 @@
+# DO NOT include azure-functions-worker in this file
+# The Python Worker is managed by Azure Functions platform
+# Manually managing azure-functions-worker may cause unexpected issues
+
+azure-functions
+azure-storage-blob
+azure-identity
+opencv-python
+cv==1.0.0
+munkres==1.1.4
+numpy==1.26.4
+opencv-python==4.9.0.80
+Pillow==10.3.0
+pygame==2.5.2
+scikit_learn==1.5.0
+scipy==1.13.1
+Shapely==2.0.4
+-f https://download.pytorch.org/whl/torch_stable.html
+torch==2.2.1+cpu
+torchvision==0.17.1+cpu
