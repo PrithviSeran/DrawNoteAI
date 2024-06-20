@@ -18,7 +18,7 @@ namespace Prince.InkML
         }
 
         [Function(nameof(RecieveInkML))]
-        public async Task Run([BlobTrigger("rundnnmodel/inkML.xml", Connection = "rundnnmodel_STORAGE")] Stream stream, string name)
+        public async Task Run([BlobTrigger("YOUR INKML ADDRESS", Connection = "THE CONNECTION STRING FROM local.settings.json")] Stream stream, string name)
         {
             using var blobStreamReader = new StreamReader(stream);
             var content = await blobStreamReader.ReadToEndAsync();
