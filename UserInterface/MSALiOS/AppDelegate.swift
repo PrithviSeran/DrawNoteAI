@@ -34,33 +34,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    /*
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
-        // The MSAL Logger should be set as early as possible in the app launch sequence, before any MSAL
-        // requests are made.
-        
-        /*
-        MSALGlobalConfig.loggerConfig.setLogCallback { (logLevel, message, containsPII) in
-            
-            // If PiiLoggingEnabled is set YES, this block will potentially contain sensitive information (Personally Identifiable Information), but not all messages will contain it.
-            // containsPII == YES indicates if a particular message contains PII.
-            // You might want to capture PII only in debug builds, or only if you take necessary actions to handle PII properly according to legal requirements of the region
-            if let displayableMessage = message {
-                if (!containsPII) {
-                    #if DEBUG
-                    // NB! This sample uses print just for testing purposes
-                    // You should only ever log to NSLog in debug mode to prevent leaking potentially sensitive information
-                    print(displayableMessage)
-                    #endif
-                }
-            }
-        }*/
-
-        return false
-    }
-     */
-
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
@@ -83,16 +56,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
     
-    /*! @brief Handles inbound URLs. Checks if the URL matches the redirect URI for a pending
-     AppAuth authorization request and if so, will look for the code in the response.
-     */
-    
-    /*
-    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-        
-        return MSALPublicClientApplication.handleMSALResponse(url, sourceApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String)
-    }
-     */
 
 }
 
