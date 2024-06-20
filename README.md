@@ -53,8 +53,8 @@ DrawNote AI is an iOS app that scans whiteboard/chalkboard writings and drawings
 
 1. **Clone the repository**:
     ```bash
-    git clone https://github.com/yourusername/drawnote-ai.git
-    cd drawnote-ai
+    git clone https://github.com/yourusername/DrawNoteAI.git
+    cd DrawNoteAI
     ```
 
 2. **Install dependencies**:
