@@ -1,9 +1,0 @@
-{
-  "profiles": {
-    "app": {
-      "commandName": "Project",
-      "commandLineArgs": "--port 9091",
-      "launchBrowser": false
-    }
-  }
-}
