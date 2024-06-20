@@ -31,10 +31,10 @@ class ViewControllerPhoto: UIViewController, UINavigationControllerDelegate, UII
     @IBOutlet var pageName: String!
     
     // Update the below to your client ID you received in the portal. The below is for running the demo only
-    let kClientID = "9ee9fb26-38bc-459b-9e11-0fb8457b68ff"
-    let kGraphEndpoint = "https://graph.microsoft.com/"
-    let kAuthority = "https://login.microsoftonline.com/common"
-    let kRedirectUri = "msauth.Prince.PrinceNotes://auth"
+    let kClientID = ""
+    let kGraphEndpoint = ""
+    let kAuthority = ""
+    let kRedirectUri = ""
     
     let kScopes: [String] = ["user.read", "Notes.Create", "Notes.ReadWrite", "Notes.ReadWrite.All"] //
     
@@ -145,15 +145,6 @@ class ViewControllerPhoto: UIViewController, UINavigationControllerDelegate, UII
         header.lineBreakMode = .byWordWrapping
         header.numberOfLines = 2
         header.textColor = .darkGray
-        
-        //self.view.addSubview(header)
-        
-        /*
-        header.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        header.topAnchor.constraint(equalTo: view.topAnchor, constant: 455.0).isActive = true
-        //signInTitle.widthAnchor.constraint(equalToConstant: 300.0).isActive = true
-        header.heightAnchor.constraint(equalToConstant: 50.0).isActive = true
-        */
         
         chooseSection = UILabel()
         chooseSection.translatesAutoresizingMaskIntoConstraints = false
@@ -382,9 +373,9 @@ class ViewControllerPhoto: UIViewController, UINavigationControllerDelegate, UII
             self.pageNameIndic.text = self.pageName
             self.pageNameIndic.textColor = .darkGray
             
-            let accountName = "princenotes2"
-            let containerName = "rundnnmodel"
-            let sasToken = "sp=rcw&st=2024-06-11T01:39:14Z&se=2025-06-01T09:39:14Z&sv=2022-11-02&sr=c&sig=6ohLBbuDkcd11CJfp5b3yE8kKEmfQDqN3n2W3yII%2BsM%3D"
+            let accountName = ""
+            let containerName = ""
+            let sasToken = ""
             
             // Define the image path and the blob name
             //let imagePath = "/Users/prithviseran/Downloads/unnamed.jpg"
@@ -454,9 +445,9 @@ class ViewControllerPhoto: UIViewController, UINavigationControllerDelegate, UII
                 
                 print("Section id: ", id)
                 
-                let accountName = "princenotes2"
-                let containerName = "rundnnmodel"
-                let sasToken = "sp=rcw&st=2024-06-11T01:39:14Z&se=2025-06-01T09:39:14Z&sv=2022-11-02&sr=c&sig=6ohLBbuDkcd11CJfp5b3yE8kKEmfQDqN3n2W3yII%2BsM%3D"
+                let accountName = ""
+                let containerName = ""
+                let sasToken = ""
                 
                 // Define the image path and the blob name
                 //let imagePath = "/Users/prithviseran/Downloads/unnamed.jpg"
@@ -507,32 +498,6 @@ class ViewControllerPhoto: UIViewController, UINavigationControllerDelegate, UII
             }
         
     }
-    
-    /*
-    func checkInfoEntered(){
-        if !self.pageNameEntered && !self.sectionIdEntered {
-            self.sectionIdIndic.text = "Please Enter the Section!"
-            self.sectionIdIndic.textColor = .red
-            self.pageNameIndic.text = "Please Enter the Name of Your Page!"
-            self.pageNameIndic.textColor = .red
-            
-            return
-        }
-        else if !self.pageNameEntered{
-            //self.sectionIdIndic.text = "Please Enter the Section!"
-            self.pageNameIndic.text = "Please Enter the Name of Your Page!"
-            self.pageNameIndic.textColor = .red
-            return
-        }
-        else if !self.sectionIdEntered {
-            self.sectionIdIndic.text = "Please Enter the Section!"
-            self.sectionIdIndic.textColor = .red
-            //self.pageNameIndic.text = "Please Enter the Name of Your Page!"
-            
-            return
-        }
-    }
-    */
     
     
     @IBAction func selectPhotoButton(sender: AnyObject) {
@@ -605,8 +570,7 @@ class ViewControllerPhoto: UIViewController, UINavigationControllerDelegate, UII
         print("Why???")
         
     }
-    
-    
+     
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
@@ -629,11 +593,6 @@ class ViewControllerPhoto: UIViewController, UINavigationControllerDelegate, UII
         self.photoButton.isEnabled = true
         self.cameraButton.isEnabled = true
         
-      
-        
-        //return
-        
-        
         // Call the getTextFromImage function passing in the image the user takes or chooses.
         getTextFromImage(subscriptionKey: "Dummy", getTextUrl: "Dummy-EndPoint", pngImage: imageByteArray!, onSuccess: { cognitiveText in
             print("cognitive text is: \(cognitiveText)")
@@ -655,24 +614,10 @@ class ViewControllerPhoto: UIViewController, UINavigationControllerDelegate, UII
     
     func getTextFromImage(subscriptionKey: String, getTextUrl: String, pngImage: Data, onSuccess: @escaping (_ theToken: String) -> Void, onFailure: @escaping ( _ theError: String) -> Void) {
         
-        /*
-        let url = URL(string: getTextUrl)!
-        var request = URLRequest(url: url)
-        request.setValue(subscriptionKey, forHTTPHeaderField: "Ocp-Apim-Subscription-Key")
-        request.setValue("application/octet-stream", forHTTPHeaderField: "Content-Type")
-        
-        // Two REST API calls are required to extract text. The first call is to submit the image for processing, and the next call is to retrieve the text found in the image.
-        
-        // Set the body to the image in byte array format.
-        request.httpBody = pngImage
-        
-        request.httpMethod = "POST"
-        */
-        //
         // Define your account and SAS token
-        let accountName = "princenotes2"
-        let containerName = "rundnnmodel"
-        let sasToken = "sp=rcw&st=2024-06-11T01:39:14Z&se=2025-06-01T09:39:14Z&sv=2022-11-02&sr=c&sig=6ohLBbuDkcd11CJfp5b3yE8kKEmfQDqN3n2W3yII%2BsM%3D"
+        let accountName = ""
+        let containerName = ""
+        let sasToken = ""
 
         // Define the image path and the blob name
         //let imagePath = "/Users/prithviseran/Downloads/unnamed.jpg"
@@ -715,96 +660,6 @@ class ViewControllerPhoto: UIViewController, UINavigationControllerDelegate, UII
         }
 
         uploadTask.resume()
-        
-        
-        /*
-        let task = URLSession.shared.dataTask(with: request) { data, response, error in
-            guard let data = data,
-                let response = response as? HTTPURLResponse,
-                // Check for networking errors.
-                error == nil else {
-                    print("error", error ?? "Unknown error")
-                    onFailure("Error")
-                    return
-            }
-            
-            // Check for http errors.
-            guard (200 ... 299) ~= response.statusCode else {
-                print("statusCode should be 2xx, but is \(response.statusCode)")
-                print("response = \(response)")
-                onFailure(String(response.statusCode))
-                return
-            }
-            
-            let responseString = String(data: data, encoding: .utf8)
-            print("responseString = \(String(describing: responseString!))")
-            
-            // Send the second call to the API. The first API call returns operationLocation which stores the URI for the second REST API call.
-            let operationLocation = response.allHeaderFields["Operation-Location"] as? String
-            
-            if (operationLocation == nil) {
-                print("Error retrieving operation location")
-                return
-            }
-            
-            // Wait 10 seconds for text recognition to be available as suggested by the Text API documentation.
-            print("Text submitted. Waiting 10 seconds to retrieve the recognized text.")
-            sleep(10)
-            
-            // HTTP GET request with the operationLocation url to retrieve the text.
-            let getTextUrl = URL(string: operationLocation!)!
-            var getTextRequest = URLRequest(url: getTextUrl)
-            getTextRequest.setValue(subscriptionKey, forHTTPHeaderField: "Ocp-Apim-Subscription-Key")
-            getTextRequest.httpMethod = "GET"
-            
-            // Send the GET request to retrieve the text.
-            let taskGetText = URLSession.shared.dataTask(with: getTextRequest) { data, response, error in
-                guard let data = data,
-                    let response = response as? HTTPURLResponse,
-                    // Check for networking errors.
-                    error == nil else {
-                        print("error", error ?? "Unknown error")
-                        onFailure("Error")
-                        return
-                }
-                
-                // Check for http errors.
-                guard (200 ... 299) ~= response.statusCode else {
-                    print("statusCode should be 2xx, but is \(response.statusCode)")
-                    print("response = \(response)")
-                    onFailure(String(response.statusCode))
-                    return
-                }
-                
-                // Decode the JSON data into an object.
-                let customDecoding = try! JSONDecoder().decode(TextApiResponse.self, from: data)
-                
-                // Loop through the lines to get all lines of text and concatenate them together.
-                var textFromImage = ""
-                for textLine in customDecoding.recognitionResults[0].lines {
-                    textFromImage = textFromImage + textLine.text + " "
-                }
-                
-                onSuccess(textFromImage)
-            }
-            taskGetText.resume()
-        
-
-        }
-        
-        task.resume()
-         */
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
