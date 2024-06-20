@@ -26,8 +26,8 @@ namespace Prince.InkML
             var client = new HttpClient();
             _logger.LogInformation($"C# Blob trigger function Processed blob\n Name: {name} \n");
 
-            string connectionString = @"DefaultEndpointsProtocol=https;AccountName=princenotes2;AccountKey=WyXAD4Ie8/JPhIe8igMqUwoM9/m+pmgnPZA36ZSicdt8xVjlJoIc4Zaq3Ti+jaWId7po/SxdFloi+AStnYkH4g==;EndpointSuffix=core.windows.net";
-            //$"DefaultEndpointsProtocol=https;AccountName={storageAccountName};AccountKey={storageAccountKey};EndpointSuffix=core.windows.net";
+            string connectionString = @"YOUR CONNECTION STRING";
+            
 
             // Create a BlobServiceClient
             BlobServiceClient blobServiceClient = new BlobServiceClient(connectionString);
