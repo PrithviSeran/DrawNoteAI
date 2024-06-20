@@ -37,10 +37,10 @@ import MSAL
 class ViewController: UIViewController, UITextFieldDelegate, URLSessionDelegate {
     
     // Update the below to your client ID you received in the portal. The below is for running the demo only
-    let kClientID = "9ee9fb26-38bc-459b-9e11-0fb8457b68ff"
-    let kGraphEndpoint = "https://graph.microsoft.com/"
-    let kAuthority = "https://login.microsoftonline.com/common"
-    let kRedirectUri = "msauth.Prince.PrinceNotes://auth"
+    let kClientID = ""
+    let kGraphEndpoint = ""
+    let kAuthority = ""
+    let kRedirectUri = ""
     
     let kScopes: [String] = ["user.read", "Notes.Create", "Notes.ReadWrite", "Notes.ReadWrite.All"] //
     
@@ -260,19 +260,6 @@ extension ViewController {
     
 }
 
-/*
-extension ViewController {
-    
-    //print("Outside")
-    @objc func loadAccount(_ sender: UIButton, account: MSALAccount) {
-
-        self.updateCurrentAccount(account: account)
-        
-    }
-    
-}
- */
-
 
 // MARK: Acquiring and using token
 
@@ -324,9 +311,9 @@ extension ViewController {
             
             self.accessToken = result.accessToken
             
-            let accountName = "princenotes2"
-            let containerName = "rundnnmodel"
-            let sasToken = "sp=rcw&st=2024-06-11T01:39:14Z&se=2025-06-01T09:39:14Z&sv=2022-11-02&sr=c&sig=6ohLBbuDkcd11CJfp5b3yE8kKEmfQDqN3n2W3yII%2BsM%3D"
+            let accountName = ""
+            let containerName = ""
+            let sasToken = ""
 
             // Define the image path and the blob name
             //let imagePath = "/Users/prithviseran/Downloads/unnamed.jpg"
@@ -479,9 +466,9 @@ extension ViewController {
             self.accessToken = result.accessToken
             //ViewControllerPhoto().
             
-            let accountName = "princenotes2"
-            let containerName = "rundnnmodel"
-            let sasToken = "sp=rcw&st=2024-06-11T01:39:14Z&se=2025-06-01T09:39:14Z&sv=2022-11-02&sr=c&sig=6ohLBbuDkcd11CJfp5b3yE8kKEmfQDqN3n2W3yII%2BsM%3D"
+            let accountName = ""
+            let containerName = ""
+            let sasToken = ""
 
             // Define the image path and the blob name
             //let imagePath = "/Users/prithviseran/Downloads/unnamed.jpg"
@@ -688,49 +675,6 @@ extension ViewController {
     }
 }
 
-/*
-
-extension ViewController {
-    
-    
-    
-    func displayCurrentAcconts(){
-        
-        guard let applicationContext = self.applicationContext else { return }
-        
-        let accountEnumerationParameters = MSALAccountEnumerationParameters()
-        accountEnumerationParameters.completionBlockQueue = DispatchQueue.main
-        
-        applicationContext.accountsFromDevice(for: accountEnumerationParameters) { (accounts, error) in
-            
-            if let error = error {
-                self.updateLogging(text: "Couldn't retrieve accounts with error: \(error)")
-                return
-            }
-            
-            guard let accounts = accounts, !accounts.isEmpty else {
-                self.updateLogging(text: "No accounts found in cache.")
-                self.updateCurrentAccount(account: nil)
-                self.photoButton.isEnabled = false
-                self.accessToken = ""
-                return
-            }
-            
-            for account in accounts {
-                let button = UIButton(type: .system)
-                button.setTitle(account.username, for: .normal)
-                button.backgroundColor = .systemBlue
-                button.setTitleColor(.white, for: .normal)
-                button.layer.cornerRadius = 10
-                stackView.addArrangedSubview(button)
-            }
-            
-        }
-        
-    }
-}
-*/
-
 
 // MARK: Get account and removing cache
 
@@ -747,35 +691,6 @@ extension ViewController {
         
         self.acquireTokenInteractively()
         
-        /*
-        applicationContext.accountsFromDevice(for: accountEnumerationParameters) { (accounts, error) in
-                    
-                    if let error = error {
-                        self.updateLogging(text: "Couldn't retrieve accounts with error: \(error)")
-                        return
-                    }
-                    
-                    guard let accounts = accounts, !accounts.isEmpty else {
-                        self.updateLogging(text: "No accounts found in cache.")
-                        self.updateCurrentAccount(account: nil)
-                        self.photoButton.isEnabled = false
-                        self.accessToken = ""
-                        if let completion = completion {
-                            completion(nil)
-                        }
-                        return
-                    }
-                    
-                    if accounts.count == 1 {
-                        // Single account found, use it directly
-                        self.handleAccount(accounts[0], completion: completion)
-                    } else {
-                        // Multiple accounts found, handle appropriately (e.g., prompt user to select an account)
-                        self.selectAccountFrom(accounts, completion: completion)
-                    }
-                }
-            
-        */
         // Note that this sample showcases an app that signs in a single account at a time
         // If you're building a more complex app that signs in multiple accounts at the same time, you'll need to use a different account retrieval API that specifies account identifier
         // For example, see "accountsFromDeviceForParameters:completionBlock:" - https://azuread.github.io/microsoft-authentication-library-for-objc/Classes/MSALPublicClientApplication.html#/c:objc(cs)MSALPublicClientApplication(im)accountsFromDeviceForParameters:completionBlock:
@@ -837,16 +752,6 @@ extension ViewController {
             
             // If testing with Microsoft's shared device mode, see the account that has been signed out from another app. More details here:
             // https://docs.microsoft.com/en-us/azure/active-directory/develop/msal-ios-shared-devices
-            /*
-            if let previousAccount = previousAccount {
-                
-                self.updateLogging(text: "The account with username \(String(describing: previousAccount.username)) has been signed out.")
-                
-            } else {
-                
-                self.updateLogging(text: "Account signed out. Updating UX")
-                self.photoButton.isEnabled = false
-            }*/
             
             self.accessToken = ""
             self.updateCurrentAccount(account: nil)
@@ -1070,17 +975,6 @@ extension ViewController {
         }
     }
     
-    /*
-    func updatePhotoButton(enabled: Bool){
-        if Thread.isMainThread {
-            deviceModeTestButton.isEnabled = enabled
-        } else {
-            DispatchQueue.main.async {
-                deviceModeTestButton.isEnabled = enabled
-            }
-        }
-    }
-     */
     
     func updateAccountLabel() {
         
