@@ -68,7 +68,7 @@ DrawNote AI is an iOS app that scans whiteboard/chalkboard writings and drawings
 
 4. **Build and Run**:
     - Open the project in Xcode.
-    - Build and run the app on your iOS device or simulator.
+    - Build and run the app on your IPhone or IPad.
 
 ## Usage
 
